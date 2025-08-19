@@ -1,13 +1,30 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/KeyBoard2/assets/index-DifKMje3.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram Mini App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <h1>Привет, <span id="username">гость</span> 👋</h1>
+
+  <script>
+    // Инициализируем WebApp
+    const tg = window.Telegram.WebApp;
+
+    // Делаем так, чтобы Mini App занял весь экран
+    tg.expand();
+
+    // Получаем данные о пользователе
+    const user = tg.initDataUnsafe?.user;
+
+    // Если есть username — покажем его
+    if (user && user.username) {
+      document.getElementById("username").innerText = user.username;
+    } else if (user && user.first_name) {
+      // Если username нет — покажем имя
+      document.getElementById("username").innerText = user.first_name;
+    }
+  </script>
+</body>
 </html>
