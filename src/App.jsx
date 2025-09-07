@@ -1,7 +1,5 @@
 const App = () => {
-  return(
-    <p>ураа</p>
-  )
+<p>ураааааа</p>
 }
 
 export default App;

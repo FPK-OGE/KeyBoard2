@@ -1,0 +1,221 @@
+    body{
+        display: grid;
+        justify-content: center;
+        background-color: #E4E4E4;
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    .mainCloud{
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: .8s;
+    z-index: 5;
+    }
+
+    .mainCloudactive{
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+   transition: .8s;
+    z-index: 5;
+    }
+
+    .MainBoard{
+    top: 192%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .8s;
+    position: absolute;
+     z-index: 3;
+    }
+    
+    .MainBoardactive{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .8s;
+    position: absolute;
+    z-index: 3;
+    }
+    .cloud{
+        position: relative;
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    .shop{
+        top: 40px;
+        position: absolute;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .Keys{
+        position: absolute;
+        top: 350px;
+        left: 75px;
+    }
+
+    .key1_0{
+        position: absolute;
+        left: 80px;
+        transition: .5s;
+        filter: blur(5px);
+        transform: scale(0.7);
+        z-index: 1;
+    }
+
+    .key1_1{   
+        position: absolute;
+        left: 280px;
+        transition: .5s;
+        z-index: 4;
+        
+    }
+
+     .key1_2{   
+        position: absolute;
+        left: 450px;
+        transition: .5s;
+        filter: blur(5px);
+        transform: scale(0.7);
+        z-index: 1;
+        
+    }
+
+    .key2_0{
+        position: absolute;
+        left: 280px;
+        transition: .5s;
+        z-index: 4;
+    }
+
+    .key2_1{    
+         position: absolute;
+        left: 80px;
+        filter: blur(5px);
+        transition: .5s;
+        transform: scale(0.7);
+        z-index: 1;
+    }
+
+    .key2_2{    
+         position: absolute;
+        left: 450px;
+        filter: blur(5px);
+        transition: .5s;
+        transform: scale(0.7);
+        z-index: 1;
+    }
+
+
+    .key3_0{
+     position: absolute;
+     left: 280px;
+     transition: .5s;
+     z-index: 4;
+    }
+
+    .key3_1{
+        position: absolute;
+        left: 450px;
+        filter: blur(5px);
+        transition: .5s;
+        transform: scale(0.7);
+        z-index: 1;
+    }
+
+    
+    .key3_2{
+        position: absolute;
+        left: 80px;
+        filter: blur(5px);
+        transition: .5s;
+        transform: scale(0.7);
+        z-index: 1;
+    }
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.modalContent {
+  background: #111111;
+  color: #A6A6A6;
+  padding: 400px 200px;
+  border-radius: 10px;
+  transform: translateY(-20px);
+  opacity: 0;
+  z-index: 2;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  right: 0;
+  z-index: 3;
+  transition: 1s;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  right: 80px;
+  z-index: 1;
+  transition: 1s;
+}
+
+
+@keyframes keyOpen {
+  from {
+    transform: rotateZ(0deg) translate(0, 0) scale(1);
+  }
+  to {
+    transform: rotateZ(-105deg) translate(200px, 40px) scale(0.5);
+  }
+}
+
+@keyframes keyClose {
+  from {
+    transform: rotateZ(-105deg) translate(200px, 40px) scale(0.5);
+  }
+  to {
+    transform: rotateZ(0deg) translate(0, 0) scale(1);
+  }
+}
+
+.keyAnimationOpen {
+  animation: keyOpen .8s forwards ease;
+}
+
+.keyAnimationClose {
+  animation: keyClose .8s forwards ease;
+}
+
+.text{
+    width: 400px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.textInfo{
+    font-size: 28px;
+}
+
+
+
+
+
